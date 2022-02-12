@@ -1,0 +1,30 @@
+@mixin counter($list: '.list', $font: '16') {
+  @for $i from 1 through 4 {
+    $num: $i - 1;
+    #{$list} .item:nth-child(#{$i})::before {
+      content: '0#{$num}';
+      font-style: Barlow;
+      font-weight: 700;
+      font-size: #{$font}px;
+      color: #ffffff;
+      margin: auto 0 auto 20px;
+    }
+  }
+}
+@mixin title($font) {
+  font-size: $font;
+  text-transform: uppercase;
+  font-family: Bellefair;
+}
+@mixin background($url) {
+  background-image: url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@mixin viewWrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

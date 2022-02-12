@@ -1,0 +1,131 @@
+@import '../../scss/mixins.scss';
+.wrapper {
+  width: 90%;
+  padding-top: 5%;
+  margin: 0 auto;
+  justify-content: space-between;
+  background: transparent;
+  z-index: 2;
+  display: flex;
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  .hamb,
+  .close {
+    width: 24px;
+    height: 21px;
+    z-index: 2;
+  }
+
+  .list {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    padding: 25% 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+  }
+  .listDesk {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: rgba(43, 42, 42, 0.425);
+  }
+  .item {
+    margin: 10px;
+    height: 31px;
+    display: flex;
+    font-size: 14px;
+  }
+  a {
+    font-size: 16px;
+    letter-spacing: 2.8px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: auto 0;
+    margin-left: 10px;
+  }
+  .active::after {
+    content: ' ';
+    position: absolute;
+    transform: translateY(-2px);
+    right: 0px;
+    height: 31px;
+    width: 4px;
+    background: #ffffff;
+  }
+
+  @include counter;
+}
+.desktop {
+  width: 100%;
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .wrapper {
+    .list {
+      padding: 10% 0;
+    }
+  }
+}
+@media (max-width: 768px) and (min-height: 668px) {
+  .wrapper {
+    .list {
+      padding: 30% 0;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 0;
+    .logo {
+      margin: auto 0 auto 5%;
+    }
+    .listDesk {
+      height: 80px;
+      width: 60%;
+      align-items: center;
+      .item {
+        height: 100%;
+      }
+      a {
+        font-size: 14px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .activeDesk {
+    position: relative;
+  }
+  .activeDesk::after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #ffffff;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    padding-top: 2.5%;
+    @include counter('.listDesk', '14');
+    .listDesk {
+      justify-content: center;
+      width: 55%;
+    }
+    .activeDesk::after {
+      left: -25px;
+    }
+  }
+}
