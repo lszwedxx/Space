@@ -15,7 +15,7 @@ const Nav = () => {
         <img className={styles.logo} src={logo} alt='logo' />
         {!open ? (
           <img
-            tabindex='0'
+            tabIndex='0'
             onClick={toggleNav}
             className={styles.hamb}
             src={iconHamb}
@@ -23,7 +23,7 @@ const Nav = () => {
           />
         ) : (
           <img
-            tabindex='0'
+            tabIndex='0'
             onClick={toggleNav}
             className={styles.close}
             src={iconClose}

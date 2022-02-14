@@ -6,7 +6,6 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   const [size, setSize] = useState(null);
-
   useEffect(() => {
     setSize(window.innerWidth);
   }, []);
