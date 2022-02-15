@@ -50,7 +50,7 @@ const Crew = ({ size }) => {
         dest && (
           <>
             <p className={styles.subtitle}>
-              <span>01</span>Meet your crew
+              <span>02</span>Meet your crew
             </p>
             <div className={styles.wrapper}>
               <img className={styles.member} src={member} alt='crew'></img>
