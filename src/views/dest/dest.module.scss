@@ -7,20 +7,14 @@
   );
   .subtitle {
     font-size: var.$subtitleMob;
-    text-transform: uppercase;
-    letter-spacing: 2.8px;
-    padding: 10px 0;
-    margin-left: 4%;
+    @include mixins.subtitle;
     span {
       padding-right: 20px;
       color: rgba(255, 255, 255, 0.4);
     }
   }
   .wrapper {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include mixins.wrapper;
     .planet {
       width: 170px;
       margin: 0 auto;
@@ -112,6 +106,9 @@
         .title {
           font-size: var.$titleSecDesk;
           justify-content: flex-start;
+        }
+        .description {
+          font-size: 18px;
         }
         .paramsWrapper {
           justify-content: flex-start;

@@ -1,0 +1,115 @@
+@use '../../scss/mixins';
+@use '../../scss/variables' as var;
+.container {
+  @include mixins.viewContainer;
+  @include mixins.background('../../assets/crew/background-crew-mobile.jpg');
+  .subtitle {
+    font-size: var.$subtitleMob;
+    @include mixins.subtitle;
+    span {
+      padding-right: 20px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+  .wrapper {
+    @include mixins.wrapper;
+    .member {
+      width: 327px;
+      padding: 30px 0;
+    }
+    .content {
+      margin: 0 auto;
+      text-align: center;
+      .function {
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+        padding: 20px;
+      }
+      .title {
+        @include mixins.title(var.$titleThMob);
+      }
+      .description {
+        padding: 10px 0 40px;
+        line-height: 170%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    @include mixins.background('../../assets/crew/background-crew-tablet.jpg');
+    .subtitle {
+      align-self: flex-start;
+      font-size: var.$subtitleTab;
+      margin-left: 5%;
+      padding-top: 20px;
+    }
+    .wrapper {
+      width: 85%;
+      flex-direction: column-reverse;
+      .member {
+        width: 456px;
+        padding: 0;
+        padding-top: 30px;
+      }
+      .content {
+        width: 70%;
+        .title {
+          font-size: var.$titleThTab;
+        }
+        .function {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    @include mixins.background('../../assets/crew/background-crew-desktop.jpg');
+    justify-content: space-between;
+    .subtitle {
+      margin-left: 8%;
+      font-size: var.$subtitleDesk;
+    }
+    .wrapper {
+      flex-direction: row-reverse;
+      margin: 0 auto;
+      justify-content: space-around;
+      .member {
+        width: 500px;
+        padding: 0;
+      }
+      .content {
+        width: 40%;
+        text-align: left;
+        margin: 0;
+        .function {
+          font-size: 32px;
+          padding-left: 0;
+        }
+        .title {
+          font-size: var.$titleThDesk;
+          justify-content: flex-start;
+        }
+        .description {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    .subtitle {
+      margin-left: 14%;
+    }
+    .wrapper {
+      margin: 0 auto;
+      .member {
+        width: 535px;
+      }
+    }
+  }
+}

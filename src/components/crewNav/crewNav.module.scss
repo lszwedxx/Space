@@ -1,0 +1,24 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 40px 0;
+  gap: 20px;
+  .item {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .active {
+    background: rgba(255, 255, 255);
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    justify-content: flex-start;
+    padding: 0;
+    padding-top: 50px;
+  }
+}

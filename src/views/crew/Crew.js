@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import NavMobile from '../../components/nav/NavMobile';
 import NavDesktop from '../../components/nav/NavDesktop';
+import styles from './crew.module.scss';
+import { anousheh, douglas, mark, victor } from '../../assets/crew/crew-imgs';
+import CrewNav from '../../components/crewNav/CrewNav';
 const Crew = ({ size }) => {
   const [destAll, setDestAll] = useState(null);
   const [dest, setDest] = useState(null);
@@ -24,11 +27,44 @@ const Crew = ({ size }) => {
       setDest(destAll.filter((item) => item.name === actual));
     }
   }, [actual]);
+
+  const handleNav = (e) => {
+    const actNav = e.target.dataset.name;
+
+    setActual(actNav);
+  };
+  const member =
+    actual === 'Douglas Hurley'
+      ? douglas
+      : actual === 'Mark Shuttleworth'
+      ? mark
+      : actual === 'Victor Glover'
+      ? victor
+      : anousheh;
   return (
-    <>
+    <div className={styles.container}>
       {size >= 768 ? <NavDesktop /> : <NavMobile />}
-      <h1>Crew</h1>;
-    </>
+      {!load && err ? (
+        <h1>Errror</h1>
+      ) : (
+        dest && (
+          <>
+            <p className={styles.subtitle}>
+              <span>01</span>Meet your crew
+            </p>
+            <div className={styles.wrapper}>
+              <img className={styles.member} src={member} alt='crew'></img>
+              <section className={styles.content}>
+                <p className={styles.function}>{dest[0].function}</p>
+                <h2 className={styles.title}>{dest[0].name}</h2>
+                <p className={styles.description}>{dest[0].description}</p>
+                <CrewNav handleNav={handleNav} name={actual} />
+              </section>
+            </div>
+          </>
+        )
+      )}
+    </div>
   );
 };
 
