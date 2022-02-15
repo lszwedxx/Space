@@ -1,0 +1,130 @@
+@use '../../scss/mixins';
+@use '../../scss/variables' as var;
+.container {
+  @include mixins.viewContainer;
+  @include mixins.background(
+    '../../assets/destination/background-destination-mobile.jpg'
+  );
+  .subtitle {
+    font-size: var.$subtitleMob;
+    text-transform: uppercase;
+    letter-spacing: 2.8px;
+    padding: 10px 0;
+    margin-left: 4%;
+    span {
+      padding-right: 20px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+  .wrapper {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .planet {
+      width: 170px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    .content {
+      margin: 0 auto;
+      text-align: center;
+      .title {
+        @include mixins.title(var.$titleSecMob);
+        padding-top: 20px;
+      }
+      .description {
+        padding: 10px 0 40px;
+        line-height: 170%;
+      }
+      .paramsWrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        .params {
+          padding: 20px 0;
+        }
+        .param {
+          font-family: Bellefair;
+          font-size: 28px;
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    @include mixins.background(
+      '../../assets/destination/background-destination-tablet.jpg'
+    );
+    .subtitle {
+      align-self: flex-start;
+      font-size: var.$subtitleTab;
+      margin-left: 5%;
+      padding-top: 20px;
+    }
+    .wrapper {
+      width: 85%;
+      .planet {
+        width: 300px;
+        padding: 30px;
+      }
+      .content {
+        width: 70%;
+        .title {
+          font-size: var.$titleSecTab;
+        }
+        .paramsWrapper {
+          flex-direction: row;
+          justify-content: space-around;
+          .params {
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    @include mixins.background(
+      '../../assets/destination/background-destination-desktop.jpg'
+    );
+    .subtitle {
+      margin-left: 12%;
+      font-size: var.$subtitleDesk;
+    }
+    .wrapper {
+      flex-direction: row;
+      margin: auto;
+      .planet {
+        width: 445px;
+      }
+      .content {
+        width: 40%;
+        text-align: left;
+        .title {
+          font-size: var.$titleSecDesk;
+          justify-content: flex-start;
+        }
+        .paramsWrapper {
+          justify-content: flex-start;
+          padding-left: 0;
+          .params {
+            padding-left: 0;
+            padding-right: 60px;
+          }
+          .param {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
