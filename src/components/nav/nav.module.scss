@@ -41,7 +41,6 @@
     margin: 10px;
     height: 31px;
     display: flex;
-    font-size: 14px;
   }
   a {
     font-size: 16px;
@@ -51,6 +50,12 @@
     text-transform: uppercase;
     margin: auto 0;
     margin-left: 10px;
+    transition: all 0.2s linear;
+    text-shadow: 2px 2px #000000;
+    &:hover {
+      font-size: 18px;
+      font-weight: bold;
+    }
   }
   .active::after {
     content: ' ';
@@ -100,6 +105,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        &:hover {
+          font-size: 18px;
+          font-weight: bold;
+        }
       }
     }
   }

@@ -15,6 +15,7 @@
   }
   .wrapper {
     @include mixins.wrapper;
+    animation: opacity 0.3s linear;
     width: 100%;
     .space {
       width: 100%;
@@ -79,6 +80,7 @@
     .wrapper {
       flex-direction: row;
       margin: auto;
+      justify-content: space-between;
       & :nth-child(1) {
         order: 3;
       }
@@ -89,7 +91,7 @@
         order: 2;
       }
       .space {
-        width: 500px;
+        width: 480px;
         padding: 0;
       }
       .content {
@@ -111,7 +113,7 @@
 @media (min-width: 1200px) {
   .container {
     .subtitle {
-      margin-left: 14%;
+      margin-left: 11%;
     }
     .wrapper {
       margin: auto;
@@ -122,5 +124,13 @@
         margin: auto;
       }
     }
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

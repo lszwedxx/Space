@@ -22,6 +22,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      animation: opacity 0.3s linear;
     }
     .subtitle {
       font-size: var.$subtitleMob;
@@ -127,5 +128,13 @@
         }
       }
     }
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
