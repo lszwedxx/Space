@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Space App
+
+![Screen](https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/wudjsbv8g93aarlhvbud.jpg)
+Project was created in React with scss and css modules.
+
+Design is from [Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
+
+All data used in views are from data.json file./
+So i used fetch to get the data and display in app.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
