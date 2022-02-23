@@ -3,6 +3,7 @@ import NavMobile from '../../components/nav/NavMobile';
 import NavDesktop from '../../components/nav/NavDesktop';
 import styles from './dest.module.scss';
 import DestNav from '../../components/destNav/DestNav';
+import Error from '../../components/error/Error';
 import { moon, mars, europa, titan } from '../../assets/destination/dest-imgs';
 const Dest = ({ size }) => {
   const [destAll, setDestAll] = useState(null);
@@ -42,7 +43,7 @@ const Dest = ({ size }) => {
     <div className={styles.container}>
       {size >= 768 ? <NavDesktop /> : <NavMobile />}
       {!load && err ? (
-        <h1>Errror</h1>
+        <Error />
       ) : dest ? (
         <>
           <p className={styles.subtitle}>

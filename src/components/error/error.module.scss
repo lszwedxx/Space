@@ -1,0 +1,33 @@
+@use '../../scss/mixins';
+@use '../../scss/variables' as var;
+.container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  .title {
+    @include mixins.title(var.$titleThMob);
+    padding: 45px;
+  }
+  img {
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    .title {
+      font-size: var.$titleThTab;
+    }
+    img {
+      width: 70%;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    img {
+      width: 50%;
+    }
+  }
+}

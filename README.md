@@ -5,7 +5,7 @@ Project was created in React with scss and css modules.
 
 Design is from [Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
 
-All data used in views are from data.json file./
+All data used in views are from data.json file.\
 So i used fetch to get the data and display in app.
 
 ## Getting Started with Create React App
