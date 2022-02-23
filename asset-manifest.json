@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Space/static/css/main.449e5535.css",
-    "main.js": "/Space/static/js/main.188d40f3.js",
+    "main.js": "/Space/static/js/main.23d40f3b.js",
     "static/js/787.e5372b0f.chunk.js": "/Space/static/js/787.e5372b0f.chunk.js",
     "static/media/err.jpg": "/Space/static/media/err.6576aeb4eb159d09f25c.jpg",
     "static/media/image-victor-glover.png": "/Space/static/media/image-victor-glover.8a9a5424588b73ec61c2.png",
@@ -33,11 +33,11 @@
     "static/media/icon-close.svg": "/Space/static/media/icon-close.d47fda63cbd8b3fedbbc1b2a53f64470.svg",
     "static/media/icon-hamburger.svg": "/Space/static/media/icon-hamburger.5273efa7c50e96ef3e51e7a2b54048ce.svg",
     "main.449e5535.css.map": "/Space/static/css/main.449e5535.css.map",
-    "main.188d40f3.js.map": "/Space/static/js/main.188d40f3.js.map",
+    "main.23d40f3b.js.map": "/Space/static/js/main.23d40f3b.js.map",
     "787.e5372b0f.chunk.js.map": "/Space/static/js/787.e5372b0f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.449e5535.css",
-    "static/js/main.188d40f3.js"
+    "static/js/main.23d40f3b.js"
   ]
 }
