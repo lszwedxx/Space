@@ -3,7 +3,9 @@ import styles from './nav.module.scss';
 import { NavLink } from 'react-router-dom';
 const NavDesktop = () => {
   return (
-    <nav className={`${styles.wrapper} ${styles.desktop}`}>
+    <nav
+      aria-label='nav-main'
+      className={`${styles.wrapper} ${styles.desktop}`}>
       <img className={styles.logo} src={logo} alt='logo' />
       <ul className={styles.listDesk}>
         <li className={styles.item}>

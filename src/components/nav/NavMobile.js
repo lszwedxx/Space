@@ -11,7 +11,7 @@ const Nav = () => {
   };
   return (
     <>
-      <nav className={styles.wrapper}>
+      <nav aria-label='nav-main-mobile' className={styles.wrapper}>
         <img className={styles.logo} src={logo} alt='logo' />
         {!open ? (
           <img

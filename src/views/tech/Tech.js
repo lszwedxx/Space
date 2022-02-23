@@ -3,6 +3,7 @@ import NavMobile from '../../components/nav/NavMobile';
 import NavDesktop from '../../components/nav/NavDesktop';
 import styles from './tech.module.scss';
 import TechNav from '../../components/techNav/TechNav';
+import Error from '../../components/error/Error';
 import {
   vehicleLand,
   vehiclePort,
@@ -31,7 +32,7 @@ const Tech = ({ size }) => {
   }, []);
   useEffect(() => {
     if (destAll) {
-      setDest(destAll.filter((item) => item.name === actual));
+      setDest(destAll.filter((item) => item.nzame === actual));
     }
   }, [actual]);
   const handleNav = (e) => {
@@ -55,7 +56,7 @@ const Tech = ({ size }) => {
     <div className={styles.container}>
       {size >= 768 ? <NavDesktop /> : <NavMobile />}
       {!load && err ? (
-        <h1>Errror</h1>
+        <Error />
       ) : dest ? (
         <>
           <p className={styles.subtitle}>

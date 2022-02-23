@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import NavMobile from '../../components/nav/NavMobile';
 import NavDesktop from '../../components/nav/NavDesktop';
 import styles from './crew.module.scss';
+import Error from '../../components/error/Error';
 import { anousheh, douglas, mark, victor } from '../../assets/crew/crew-imgs';
 import CrewNav from '../../components/crewNav/CrewNav';
 const Crew = ({ size }) => {
@@ -45,7 +46,7 @@ const Crew = ({ size }) => {
     <div className={styles.container}>
       {size >= 768 ? <NavDesktop /> : <NavMobile />}
       {!load && err ? (
-        <h1>Errror</h1>
+        <Error />
       ) : (
         dest && (
           <>
