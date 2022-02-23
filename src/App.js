@@ -4,6 +4,7 @@ import Crew from './views/crew/Crew';
 import Tech from './views/tech/Tech';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './components/error/ErrorBoundary';
 function App() {
   const [size, setSize] = useState(null);
   useEffect(() => {
@@ -18,14 +19,16 @@ function App() {
   }, []);
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Home size={size} />} />
-          <Route path='destination' element={<Dest size={size} />} />
-          <Route path='crew' element={<Crew size={size} />} />
-          <Route path='technology' element={<Tech size={size} />} />
-        </Routes>
-      </Router>
+      <ErrorBoundary>
+        <Router>
+          <Routes>
+            <Route path='/' element={<Home size={size} />} />
+            <Route path='destination' element={<Dest size={size} />} />
+            <Route path='crew' element={<Crew size={size} />} />
+            <Route path='technology' element={<Tech size={size} />} />
+          </Routes>
+        </Router>
+      </ErrorBoundary>
     </>
   );
 }

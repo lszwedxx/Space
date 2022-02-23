@@ -32,7 +32,7 @@ const Tech = ({ size }) => {
   }, []);
   useEffect(() => {
     if (destAll) {
-      setDest(destAll.filter((item) => item.nzame === actual));
+      setDest(destAll.filter((item) => item.name === actual));
     }
   }, [actual]);
   const handleNav = (e) => {

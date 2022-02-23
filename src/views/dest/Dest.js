@@ -25,7 +25,7 @@ const Dest = ({ size }) => {
   }, []);
   useEffect(() => {
     if (destAll) {
-      setDest(destAll.filter((item) => item.name === actual));
+      setDest(destAll.filter((item) => item.naame === actual));
     }
   }, [actual]);
   const handleNav = (e) => {
@@ -43,7 +43,7 @@ const Dest = ({ size }) => {
     <div className={styles.container}>
       {size >= 768 ? <NavDesktop /> : <NavMobile />}
       {!load && err ? (
-        <Error />
+        <Error err={'api'} />
       ) : dest ? (
         <>
           <p className={styles.subtitle}>

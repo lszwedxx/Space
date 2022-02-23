@@ -1,10 +1,10 @@
 import styles from './error.module.scss';
-import err from '../../assets/err/err.jpg';
-const Error = () => {
+import errImg from '../../assets/err/err.jpg';
+const Error = ({ err }) => {
   return (
-    <section className={styles.container}>
+    <section className={`${err === 'api' ? styles.api : styles.container}`}>
       <h2 className={styles.title}>Ups... something bad has happened</h2>
-      <img src={err} alt='error'></img>
+      <img src={errImg} alt='error'></img>
     </section>
   );
 };
