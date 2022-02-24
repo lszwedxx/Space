@@ -5,6 +5,8 @@ Project was created in React with scss and css modules.
 
 Design is from [Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
 
+[Live](https://clever-poitras-9a80e4.netlify.app).
+
 All data used in views are from data.json file.\
 So i used fetch to get the data and display in app.
 
