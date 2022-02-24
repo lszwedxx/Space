@@ -25,7 +25,7 @@ const Dest = ({ size }) => {
   }, []);
   useEffect(() => {
     if (destAll) {
-      setDest(destAll.filter((item) => item.naame === actual));
+      setDest(destAll.filter((item) => item.name === actual));
     }
   }, [actual]);
   const handleNav = (e) => {

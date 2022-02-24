@@ -56,7 +56,7 @@ const Tech = ({ size }) => {
     <div className={styles.container}>
       {size >= 768 ? <NavDesktop /> : <NavMobile />}
       {!load && err ? (
-        <Error />
+        <Error err={'api'} />
       ) : dest ? (
         <>
           <p className={styles.subtitle}>
